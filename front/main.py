@@ -10,12 +10,12 @@ BENTO_HOST = os.getenv("BENTO_HOST", "localhost")
 BENTO_PORT = os.getenv("BENTO_PORT", "3000")
 
 def highlight_borders(img: str, info: dict):
-    boxes = [x["box"] for x in info]    # Координаты прямоугольника вокруг найденного объекта
-    probs = [x["confidence"] for x in info]                          # Уверенность сети в данной детекции
-    cls = [x["class"] for x in info]            # Индексы имён классов
-    names = [x["name"] for x in info]            # Конвертация индексов в название классов
+    boxes = [x["box"] for x in info] 
+    probs = [x["confidence"] for x in info]
+    cls = [x["class"] for x in info] 
+    names = [x["name"] for x in info]
 
-    image = cv2.imread(img, cv2.IMREAD_COLOR)  # Открытие цветного изображения (примечание: открывается в BGR)
+    image = cv2.imread(img, cv2.IMREAD_COLOR)
 
     detection_visualization = image.copy()
 

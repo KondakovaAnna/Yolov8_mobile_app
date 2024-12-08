@@ -26,7 +26,7 @@ class YoloV8:
     def __init__(self):
         from ultralytics import YOLO
 
-        yolo_model = os.getenv("YOLO_MODEL", "../best.pt")
+        yolo_model = os.getenv("YOLO_MODEL", "./best.pt")
 
         self.model = YOLO(yolo_model)
 

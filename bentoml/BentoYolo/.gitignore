@@ -1,3 +1,4 @@
 yolo*.pt
 .venv/
 *.py[cod]
+venv_wsl/

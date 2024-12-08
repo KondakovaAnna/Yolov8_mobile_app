@@ -1,0 +1,32 @@
+version: "3.9"
+
+
+services:
+  app:
+    image: front_lab:latest
+    container_name: front_lab_main
+    pull_policy: never
+    restart: always
+    ports:
+      - 8501:8501
+    working_dir: /app
+    environment:
+      BENTO_HOST: bento
+      BENTO_PORT: 3000
+    networks:
+      - lab-net
+
+  bento:
+    image: bento_test:v1
+    container_name: bento_main
+    pull_policy: never
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - lab-net
+
+
+
+networks:
+  lab-net:

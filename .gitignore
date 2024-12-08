@@ -35,5 +35,6 @@ google-services.json
 results/
 masks/
 /venv/
+/bentoml/BentoYolo/venv_wsl/
 /guitars
 /bentoml/venv/
