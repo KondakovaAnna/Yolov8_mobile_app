@@ -48,3 +48,8 @@ class YoloV8:
         output = "aaaaaa.jpeg" #images.parent.joinpath(f"{images.stem}_result{images.suffix}")
         result.save(output)
         return Image.open(output)
+      
+if __name__ == "__main__":
+    service = YoloV8()
+    bento = bentoml.Service("yolov8_service")
+    bento.run()
